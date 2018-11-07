@@ -1,0 +1,63 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".EventsActivity">
+
+    <Button
+        android:id="@+id/mealBtn"
+        android:layout_width="300dp"
+        android:layout_height="60dp"
+        android:layout_marginBottom="32dp"
+        android:text="meal"
+        app:layout_constraintBottom_toTopOf="@+id/workBtn"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent" />
+
+    <Button
+        android:id="@+id/workBtn"
+        android:layout_width="300dp"
+        android:layout_height="60dp"
+        android:layout_marginBottom="32dp"
+        android:text="Work"
+        app:layout_constraintBottom_toTopOf="@+id/exerciseBtn"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent" />
+
+    <Button
+        android:id="@+id/exerciseBtn"
+        android:layout_width="300dp"
+        android:layout_height="60dp"
+        android:layout_marginBottom="32dp"
+        android:text="Exercise"
+        app:layout_constraintBottom_toTopOf="@+id/sleepBtn"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent" />
+
+    <Button
+        android:id="@+id/sleepBtn"
+        android:layout_width="300dp"
+        android:layout_height="60dp"
+        android:layout_marginBottom="100dp"
+        android:text="Sleep"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent" />
+
+    <TextView
+        android:id="@+id/eventsView"
+        android:layout_width="300dp"
+        android:layout_height="60dp"
+        android:layout_marginTop="28dp"
+        android:layout_marginBottom="8dp"
+        android:text="EVENTS"
+        android:textAlignment="center"
+        android:textSize="36sp"
+        app:layout_constraintBottom_toTopOf="@+id/mealBtn"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.0" />
+</android.support.constraint.ConstraintLayout>
