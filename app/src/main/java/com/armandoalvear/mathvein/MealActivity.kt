@@ -7,6 +7,7 @@ import android.widget.Toast
 import com.android.volley.Request
 import com.android.volley.Response
 import com.android.volley.toolbox.JsonObjectRequest
+import com.android.volley.toolbox.Volley
 import kotlinx.android.synthetic.main.activity_meal.*
 import org.json.JSONObject
 
@@ -17,6 +18,8 @@ class MealActivity : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_meal)
+
+        submitBtn = findViewById(R.id.submitBtn)
 
         submitBtn.setOnClickListener{
 
@@ -36,7 +39,7 @@ class MealActivity : AppCompatActivity() {
                 put("drink", drink)
             }
 
-            val url = "https://aa1191.000webhostapp.com/scripts/enter_meals.php"
+            val url = "https://aa1191.000webhostapp.com/scripts/enter_meal.php"
             val jsonObjectRequest = JsonObjectRequest(Request.Method.POST, url, jsonObject,
                     Response.Listener{
                         val error = it.get("error")
@@ -47,7 +50,11 @@ class MealActivity : AppCompatActivity() {
                             snackField.setText("")
                             drinkField.setText("")
 
-                            Toast.makeText(this, "Successful!",
+                            Toast.makeText(this, "Updated!",
+                                    Toast.LENGTH_LONG).show()
+                        }
+                        else if(error == 2){
+                            Toast.makeText(this, "Error: Empty Fields",
                                     Toast.LENGTH_LONG).show()
                         }
                         else{
@@ -56,10 +63,10 @@ class MealActivity : AppCompatActivity() {
                         }
                     },
                     Response.ErrorListener {
-                        Toast.makeText(this, "Unsuccessful",
+                        Toast.makeText(this, "Unsuccessful!",
                                 Toast.LENGTH_LONG).show()
-
                     })
+            Volley.newRequestQueue(this).add(jsonObjectRequest)
         }
     }
 }
