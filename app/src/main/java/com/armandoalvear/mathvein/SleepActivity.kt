@@ -4,7 +4,6 @@ import android.support.v7.app.AppCompatActivity
 import android.os.Bundle
 import android.support.v7.widget.SwitchCompat
 import android.widget.Button
-import android.widget.Switch
 import android.widget.Toast
 import com.android.volley.Request
 import com.android.volley.Response
@@ -45,7 +44,12 @@ class SleepActivity : AppCompatActivity() {
                     Response.Listener{
                         val error = it.get("error")
                         if (error==0){
-                            Toast.makeText(this, "Successful!",
+                            startTimeField.setText("")
+                            endTimeField.setText("")
+                            switch_1.isChecked = false
+                            switch_2.isChecked = false
+
+                            Toast.makeText(this, "Updated!",
                                     Toast.LENGTH_LONG).show()
                         }
                         else

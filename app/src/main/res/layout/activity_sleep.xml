@@ -36,7 +36,7 @@
         android:layout_width="160dp"
         android:layout_height="45dp"
         android:layout_marginStart="92dp"
-        android:layout_marginBottom="8dp"
+        android:layout_marginBottom="16dp"
         android:ems="10"
         android:hint="@string/start_time"
         android:importantForAutofill="no"
@@ -61,26 +61,31 @@
         android:id="@+id/switch1"
         android:layout_width="60dp"
         android:layout_height="45dp"
-        android:layout_marginEnd="11dp"
+        android:layout_marginEnd="80dp"
         android:textOff="@string/am"
         android:textOn="@string/pm"
+        app:layout_constraintBottom_toBottomOf="@+id/startTimeField"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.0"
         app:layout_constraintStart_toEndOf="@+id/startTimeField"
         app:layout_constraintTop_toTopOf="@+id/startTimeField"
+        app:layout_constraintVertical_bias="0.0"
         app:showText="true" />
 
     <android.support.v7.widget.SwitchCompat
         android:id="@+id/switch2"
         android:layout_width="60dp"
         android:layout_height="45dp"
+        android:layout_marginTop="8dp"
         android:layout_marginEnd="8dp"
-        android:textOff="AM"
-        android:textOn="PM"
+        android:textOff="@string/am"
+        android:textOn="@string/pm"
         app:layout_constraintBottom_toBottomOf="@+id/endTimeField"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.0"
         app:layout_constraintStart_toEndOf="@+id/endTimeField"
+        app:layout_constraintTop_toTopOf="@+id/endTimeField"
+        app:layout_constraintVertical_bias="1.0"
         app:showText="true" />
 
 </android.support.constraint.ConstraintLayout>

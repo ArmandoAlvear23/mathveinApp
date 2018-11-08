@@ -7,7 +7,6 @@ import com.android.volley.Request
 import com.android.volley.Response
 import com.android.volley.toolbox.JsonObjectRequest
 import com.android.volley.toolbox.Volley
-import kotlinx.android.synthetic.main.activity_main.*
 import kotlinx.android.synthetic.main.activity_vitals.*
 import org.json.JSONObject
 
@@ -36,6 +35,9 @@ class VitalsActivity : AppCompatActivity() {
                     Response.Listener {
                         val success = it.get("success")
                         if (success == 1){
+                            bloodSugarField.setText("")
+                            systolicField.setText("")
+                            diastolicField.setText("")
                             Toast.makeText(this, "Successful!",
                                     Toast.LENGTH_LONG).show()
                         }
