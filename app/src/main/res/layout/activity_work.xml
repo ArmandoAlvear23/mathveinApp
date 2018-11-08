@@ -76,7 +76,7 @@
         android:ems="10"
         android:hint="@string/start_time"
         android:importantForAutofill="no"
-        android:inputType="date"
+        android:inputType="time"
         app:layout_constraintBottom_toTopOf="@+id/endTimeField"
         app:layout_constraintStart_toStartOf="parent" />
 
@@ -101,7 +101,7 @@
         android:layout_marginBottom="60dp"
         android:ems="10"
         android:hint="@string/end_time"
-        android:inputType="date"
+        android:inputType="time"
         app:layout_constraintBottom_toTopOf="@+id/submitBtn"
         app:layout_constraintStart_toStartOf="parent" />
 

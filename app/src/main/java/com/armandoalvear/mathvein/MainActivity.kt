@@ -45,6 +45,11 @@ class MainActivity : AppCompatActivity() {
             startActivity(intent)
         }
 
+        historyButton.setOnClickListener{
+            val intent: Intent = Intent(applicationContext, HistoryActivity::class.java)
+            startActivity(intent)
+        }
+
 
 
     }

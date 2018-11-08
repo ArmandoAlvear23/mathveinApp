@@ -49,6 +49,7 @@
     <string name="drink">Drink</string>
     <string name="enter_meal">Enter Meal</string>
     <string name="intensity_prompt">Choose 1-5</string>
+    <string name="notifications">notifications</string>
     <string-array name="intensity_array">
         <item>1</item>
         <item>2</item>

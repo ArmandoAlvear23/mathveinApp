@@ -6,4 +6,50 @@
     android:layout_height="match_parent"
     tools:context=".HistoryActivity">
 
+    <Button
+        android:id="@+id/vitalsBtn"
+        android:layout_width="300dp"
+        android:layout_height="60dp"
+        android:layout_marginBottom="32dp"
+        android:text="@string/vitals"
+        app:layout_constraintBottom_toTopOf="@+id/eventsBtn"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toStartOf="parent" />
+
+    <TextView
+        android:id="@+id/historyTitle"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="16dp"
+        android:layout_marginBottom="8dp"
+        android:text="@string/history"
+        android:textSize="36sp"
+        app:layout_constraintBottom_toTopOf="@+id/vitalsBtn"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.135" />
+
+    <Button
+        android:id="@+id/eventsBtn"
+        android:layout_width="300dp"
+        android:layout_height="60dp"
+        android:layout_marginBottom="32dp"
+        android:text="@string/events"
+        app:layout_constraintBottom_toTopOf="@+id/notificationsBtn"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toStartOf="parent" />
+
+    <Button
+        android:id="@+id/notificationsBtn"
+        android:layout_width="300dp"
+        android:layout_height="60dp"
+        android:layout_marginBottom="120dp"
+        android:text="@string/notifications"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toStartOf="parent" />
 </android.support.constraint.ConstraintLayout>

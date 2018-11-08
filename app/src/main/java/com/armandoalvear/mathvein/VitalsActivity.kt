@@ -17,14 +17,13 @@ class VitalsActivity : AppCompatActivity() {
         setContentView(R.layout.activity_vitals)
 
         submitBtn.setOnClickListener{
+            val userID = 1
             val bloodGlucose = bloodSugarField.text.toString()
-
             val systolic = systolicField.text.toString()
             val diastolic = diastolicField.text.toString()
-            val user_id = 1
 
             val jsonObject = JSONObject().apply{
-                put("user_id", user_id)
+                put("user_id", userID)
                 put("systolic", systolic)
                 put("diastolic", diastolic)
                 put("blood_glucose", bloodGlucose)
@@ -38,16 +37,17 @@ class VitalsActivity : AppCompatActivity() {
                             bloodSugarField.setText("")
                             systolicField.setText("")
                             diastolicField.setText("")
-                            Toast.makeText(this, "Successful!",
+                            Toast.makeText(this, "Updated!",
                                     Toast.LENGTH_LONG).show()
                         }
                         else {
-                            Toast.makeText(this, "Unsuccessful!",
+                            val error = it.get("error")
+                            Toast.makeText(this, "Error: $error",
                                     Toast.LENGTH_LONG).show()
                         }
                     },
                     Response.ErrorListener {
-                        Toast.makeText(this, "Failed!",
+                        Toast.makeText(this, "Unsuccessful!",
                                 Toast.LENGTH_LONG).show()
                     })
             Volley.newRequestQueue(this).add(jsonObjectRequest)
