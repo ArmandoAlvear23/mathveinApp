@@ -40,7 +40,7 @@
         <activity android:name=".MealElementActivity" />
         <activity android:name=".WorkHistoryActivity" />
         <activity android:name=".WorkElementActivity" />
-        <activity android:name=".ExcerciseHistoryActivity" />
+        <activity android:name=".ExerciseHistoryActivity" />
         <activity android:name=".ExerciseElementActivity" />
         <activity android:name=".SleepHistoryActivity" />
         <activity android:name=".SleepElementActivity" />

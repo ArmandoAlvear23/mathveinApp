@@ -7,9 +7,9 @@ import android.widget.Button
 
 class HistoryActivity : AppCompatActivity() {
 
-    lateinit var vitalsButton: Button
-    lateinit var eventsButton: Button
-    lateinit var notificationsButton: Button
+    private lateinit var vitalsButton: Button
+    private lateinit var eventsButton: Button
+    private lateinit var notificationsButton: Button
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
