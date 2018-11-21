@@ -55,6 +55,8 @@
     <string name="exercise">Exercise</string>
     <string name="sleep">Sleep</string>
     <string name="events1">EVENTS</string>
+    <string name="_0_bpm">0 BPM</string>
+    <string name="start">Start</string>
     <string-array name="intensity_array">
         <item>1</item>
         <item>2</item>

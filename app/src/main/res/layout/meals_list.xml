@@ -1,0 +1,67 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:padding="8dp">
+
+        <TextView
+            android:id="@+id/timestampTextView"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="5dp"
+            android:textAppearance="@style/Base.TextAppearance.AppCompat.Small"
+            android:textColor="#000000" />
+
+        <TextView
+            android:id="@+id/appetizerTextView"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content" 
+            android:layout_below="@id/timestampTextView"
+            android:layout_marginLeft="5dp"
+            android:layout_marginTop="5dp"
+            android:textAppearance="@style/Base.TextAppearance.AppCompat.Small"/>
+
+        <TextView
+            android:id="@+id/mainTextView"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/appetizerTextView"
+            android:layout_marginLeft="5dp"
+            android:layout_marginTop="5dp"
+            android:textAppearance="@style/Base.TextAppearance.AppCompat.Small"/>
+
+        <TextView
+            android:id="@+id/dessertTextView"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/mainTextView"
+            android:layout_marginLeft="5dp"
+            android:layout_marginTop="5dp"
+            android:textAppearance="@style/Base.TextAppearance.AppCompat.Small"/>
+
+        <TextView
+            android:id="@+id/snackTextView"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/snackTextView"
+            android:layout_marginLeft="5dp"
+            android:layout_marginTop="5dp"
+            android:textAppearance="@style/Base.TextAppearance.AppCompat.Small"/>
+
+        <TextView
+            android:id="@+id/drinkTextView"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/drinkTextView"
+            android:layout_marginLeft="5dp"
+            android:layout_marginTop="5dp"
+            android:textAppearance="@style/Base.TextAppearance.AppCompat.Small"/>
+
+    </RelativeLayout>
+
+</LinearLayout>

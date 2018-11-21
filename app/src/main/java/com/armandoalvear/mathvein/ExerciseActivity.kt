@@ -60,10 +60,13 @@ class ExerciseActivity : AppCompatActivity() {
                             Toast.makeText(this, "Updated!",
                                     Toast.LENGTH_LONG).show()
                         }
-                        else if (error==2){
+                        else if (error==4){
                             Toast.makeText(this, "Error: Blank Fields",
                                     Toast.LENGTH_LONG).show()
                         }
+                        else
+                            Toast.makeText(this, "Error: $error",
+                                    Toast.LENGTH_LONG).show()
                     },
                     Response.ErrorListener {
                         Toast.makeText(this, "Unsuccessful!",
