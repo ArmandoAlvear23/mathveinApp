@@ -9,6 +9,8 @@ class Exercise {
     var endAmPm: Int = 0
     var timestamp: String? = null
 
+
+
     constructor(desc: String?, intense: Int, startTime: String?, endTime: String?, startAmPm: Int, endAmPm: Int, timestamp: String?) {
         this.desc = desc
         this.intense = intense
@@ -18,4 +20,6 @@ class Exercise {
         this.endAmPm = endAmPm
         this.timestamp = timestamp
     }
+
+    constructor()
 }

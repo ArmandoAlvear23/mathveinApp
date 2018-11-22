@@ -8,45 +8,46 @@
 
     <EditText
         android:id="@+id/bloodSugarField"
-        android:layout_width="220dp"
+        android:layout_width="200dp"
         android:layout_height="50dp"
         android:layout_marginBottom="16dp"
         android:ems="10"
         android:hint="@string/blood_sugar"
-        android:inputType="textPersonName"
+        android:importantForAutofill="no"
+        android:inputType="number"
         app:layout_constraintBottom_toTopOf="@+id/systolicField"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.502"
-        app:layout_constraintStart_toStartOf="parent"
-        android:importantForAutofill="no" />
+        app:layout_constraintStart_toStartOf="parent" />
 
     <EditText
         android:id="@+id/systolicField"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
+        android:layout_width="200dp"
+        android:layout_height="50dp"
         android:layout_marginBottom="16dp"
         android:ems="10"
         android:hint="@string/systolic"
-        android:inputType="textPersonName|textWebEmailAddress"
+        android:importantForAutofill="no"
+        android:inputType="number"
         app:layout_constraintBottom_toTopOf="@+id/diastolicField"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.502"
-        app:layout_constraintStart_toStartOf="parent"
-        android:importantForAutofill="no" />
+        app:layout_constraintStart_toStartOf="parent" />
 
     <EditText
         android:id="@+id/diastolicField"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
+        android:layout_width="200dp"
+        android:layout_height="50dp"
+        android:layout_marginEnd="6dp"
         android:layout_marginBottom="108dp"
         android:ems="10"
         android:hint="@string/diastolic"
-        android:inputType="textPersonName|textWebEmailAddress"
+        android:importantForAutofill="no"
+        android:inputType="number"
         app:layout_constraintBottom_toTopOf="@+id/submitBtn"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.502"
-        app:layout_constraintStart_toStartOf="parent"
-        android:importantForAutofill="no" />
+        app:layout_constraintStart_toStartOf="parent" />
 
     <TextView
         android:id="@+id/vitalsTitle"

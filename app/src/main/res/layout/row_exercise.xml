@@ -4,7 +4,7 @@
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
-    android:layout_height="match_parent">
+    android:layout_height="wrap_content">
 
     <TextView
         android:id="@+id/description_ex_history"
@@ -34,12 +34,11 @@
         android:id="@+id/intensity_ex_history"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginStart="116dp"
+        android:layout_marginEnd="110dp"
         android:text="Intensity: "
-        app:layout_constraintBottom_toBottomOf="@+id/description_ex_history"
-        app:layout_constraintStart_toEndOf="@+id/description_ex_history"
-        app:layout_constraintTop_toTopOf="@+id/description_ex_history"
-        app:layout_constraintVertical_bias="0.0" />
+        app:layout_constraintBottom_toBottomOf="@+id/date_ex_history"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="@+id/date_ex_history" />
 
     <TextView
         android:id="@+id/end_ex_history"
@@ -57,7 +56,9 @@
         android:layout_height="wrap_content"
         android:layout_marginStart="16dp"
         android:layout_marginTop="8dp"
+        android:layout_marginBottom="16dp"
         android:text="Date:"
+        app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/start_ex_history" />
 </android.support.constraint.ConstraintLayout>

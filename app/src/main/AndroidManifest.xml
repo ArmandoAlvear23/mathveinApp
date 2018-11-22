@@ -45,7 +45,11 @@
         <activity android:name=".SleepHistoryActivity" />
         <activity android:name=".SleepElementActivity" />
         <activity android:name=".NotificationsHistoryActivity" />
-        <activity android:name=".NotificationsElementActivity"></activity>
+        <activity android:name=".NotificationsElementActivity" />
+        <activity
+            android:name=".example"
+            android:label="@string/title_activity_example"
+            android:theme="@style/AppTheme.NoActionBar"></activity>
     </application>
 
 </manifest>
