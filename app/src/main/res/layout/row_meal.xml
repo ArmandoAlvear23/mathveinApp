@@ -1,0 +1,72 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.constraint.ConstraintLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content">
+
+    <TextView
+        android:id="@+id/main_me_history"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="16dp"
+        android:layout_marginBottom="8dp"
+        android:text="MainDish"
+        android:textAllCaps="true"
+        android:textColor="@android:color/black"
+        android:textSize="16sp"
+        android:textStyle="bold"
+        app:layout_constraintBottom_toTopOf="@+id/drink_me_history"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/drink_me_history"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="16dp"
+        android:layout_marginBottom="8dp"
+        android:text="Drink:"
+        app:layout_constraintBottom_toTopOf="@+id/date_me_history"
+        app:layout_constraintStart_toStartOf="parent" />
+
+    <TextView
+        android:id="@+id/date_me_history"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="16dp"
+        android:layout_marginBottom="16dp"
+        android:text="Date:"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toStartOf="parent" />
+
+    <TextView
+        android:id="@+id/appetizer_me_history"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="130dp"
+        android:text="Appetizer:"
+        app:layout_constraintBottom_toBottomOf="@+id/main_me_history"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="@+id/main_me_history" />
+
+    <TextView
+        android:id="@+id/dessert_me_history"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Dessert:"
+        app:layout_constraintBottom_toBottomOf="@+id/drink_me_history"
+        app:layout_constraintStart_toStartOf="@+id/appetizer_me_history"
+        app:layout_constraintTop_toTopOf="@+id/drink_me_history" />
+
+    <TextView
+        android:id="@+id/snack_me_history"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Snack:"
+        app:layout_constraintBottom_toBottomOf="@+id/date_me_history"
+        app:layout_constraintStart_toStartOf="@+id/dessert_me_history"
+        app:layout_constraintTop_toTopOf="@+id/date_me_history" />
+</android.support.constraint.ConstraintLayout>
