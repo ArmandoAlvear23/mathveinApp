@@ -14,4 +14,6 @@ class Sleep {
         this.endAmPm = endAmPm
         this.timestamp = timestamp
     }
+
+    constructor()
 }

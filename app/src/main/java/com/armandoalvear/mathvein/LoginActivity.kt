@@ -1,3 +1,5 @@
+@file:Suppress("DEPRECATION")
+
 package com.armandoalvear.mathvein
 
 import android.animation.Animator

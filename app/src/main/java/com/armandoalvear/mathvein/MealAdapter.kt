@@ -13,7 +13,7 @@ class MealAdapter(private val context: Context, private val list: List<Meal>): R
     }
 
     override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): ViewHolder {
-        val v = LayoutInflater.from(context).inflate(R.layout.row_exercise, parent, false)
+        val v = LayoutInflater.from(context).inflate(R.layout.row_meal, parent, false)
         return ViewHolder(v)
     }
 

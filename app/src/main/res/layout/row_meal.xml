@@ -13,7 +13,7 @@
         android:layout_marginStart="16dp"
         android:layout_marginTop="16dp"
         android:layout_marginBottom="8dp"
-        android:text="MainDish"
+        android:text="@string/maindish"
         android:textAllCaps="true"
         android:textColor="@android:color/black"
         android:textSize="16sp"
@@ -28,7 +28,7 @@
         android:layout_height="wrap_content"
         android:layout_marginStart="16dp"
         android:layout_marginBottom="8dp"
-        android:text="Drink:"
+        android:text="@string/drink_"
         app:layout_constraintBottom_toTopOf="@+id/date_me_history"
         app:layout_constraintStart_toStartOf="parent" />
 
@@ -38,7 +38,7 @@
         android:layout_height="wrap_content"
         android:layout_marginStart="16dp"
         android:layout_marginBottom="16dp"
-        android:text="Date:"
+        android:text="@string/date"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintStart_toStartOf="parent" />
 
@@ -46,27 +46,27 @@
         android:id="@+id/appetizer_me_history"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginEnd="130dp"
-        android:text="Appetizer:"
+        android:text="@string/appetizer_"
         app:layout_constraintBottom_toBottomOf="@+id/main_me_history"
-        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="@+id/dessert_me_history"
         app:layout_constraintTop_toTopOf="@+id/main_me_history" />
 
     <TextView
         android:id="@+id/dessert_me_history"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="Dessert:"
+        android:text="@string/dessert_"
         app:layout_constraintBottom_toBottomOf="@+id/drink_me_history"
-        app:layout_constraintStart_toStartOf="@+id/appetizer_me_history"
+        app:layout_constraintStart_toStartOf="@+id/snack_me_history"
         app:layout_constraintTop_toTopOf="@+id/drink_me_history" />
 
     <TextView
         android:id="@+id/snack_me_history"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="Snack:"
+        android:layout_marginStart="100dp"
+        android:text="@string/snack_"
         app:layout_constraintBottom_toBottomOf="@+id/date_me_history"
-        app:layout_constraintStart_toStartOf="@+id/dessert_me_history"
+        app:layout_constraintStart_toEndOf="@+id/date_me_history"
         app:layout_constraintTop_toTopOf="@+id/date_me_history" />
 </android.support.constraint.ConstraintLayout>

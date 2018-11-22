@@ -12,7 +12,7 @@
         android:layout_height="wrap_content"
         android:layout_marginStart="16dp"
         android:layout_marginTop="16dp"
-        android:text="description"
+        android:text="@string/description"
         android:textAllCaps="true"
         android:textColor="@android:color/black"
         android:textSize="16sp"
@@ -26,7 +26,7 @@
         android:layout_height="wrap_content"
         android:layout_marginStart="16dp"
         android:layout_marginTop="8dp"
-        android:text="Start:"
+        android:text="@string/start_"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/description_ex_history" />
 
@@ -35,7 +35,7 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginEnd="110dp"
-        android:text="Intensity: "
+        android:text="@string/intensity_"
         app:layout_constraintBottom_toBottomOf="@+id/date_ex_history"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintTop_toTopOf="@+id/date_ex_history" />
@@ -44,7 +44,7 @@
         android:id="@+id/end_ex_history"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="End:"
+        android:text="@string/end_"
         app:layout_constraintBottom_toBottomOf="@+id/start_ex_history"
         app:layout_constraintStart_toStartOf="@+id/intensity_ex_history"
         app:layout_constraintTop_toTopOf="@+id/start_ex_history"
@@ -57,7 +57,7 @@
         android:layout_marginStart="16dp"
         android:layout_marginTop="8dp"
         android:layout_marginBottom="16dp"
-        android:text="Date:"
+        android:text="@string/date"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/start_ex_history" />

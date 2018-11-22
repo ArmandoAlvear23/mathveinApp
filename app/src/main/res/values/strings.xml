@@ -65,5 +65,15 @@
         <item>5</item>
     </string-array>
     <string name="title_activity_example">example</string>
+    <string name="maindish">MainDish</string>
+    <string name="drink_">Drink:</string>
+    <string name="date">Date:</string>
+    <string name="appetizer_">Appetizer:</string>
+    <string name="dessert_">Dessert:</string>
+    <string name="snack_">Snack:</string>
+    <string name="description">description</string>
+    <string name="start_">Start:</string>
+    <string name="intensity_">Intensity:</string>
+    <string name="end_">End:</string>
 
 </resources>

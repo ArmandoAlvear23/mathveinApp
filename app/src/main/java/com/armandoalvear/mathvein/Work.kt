@@ -18,4 +18,6 @@ class Work {
         this.endAmPm = endAmPm
         this.timestamp = timestamp
     }
+
+    constructor()
 }
