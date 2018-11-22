@@ -12,8 +12,6 @@ class EventsHistoryActivity : AppCompatActivity() {
     private lateinit var exerciseButton: Button
     private lateinit var sleepButton: Button
 
-
-
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_events_history)

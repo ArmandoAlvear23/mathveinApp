@@ -49,11 +49,7 @@ class MainActivity : AppCompatActivity() {
             val intent: Intent = Intent(applicationContext, HistoryActivity::class.java)
             startActivity(intent)
         }
-
-
-
     }
-
 }
 
 

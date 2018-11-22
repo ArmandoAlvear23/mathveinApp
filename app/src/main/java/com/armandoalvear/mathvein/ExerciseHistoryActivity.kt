@@ -24,31 +24,12 @@ import org.json.JSONObject
 import org.w3c.dom.Text
 
 class ExerciseHistoryActivity : AppCompatActivity() {
-//   // lateinit var  eList: RecyclerView
-//    lateinit var linearLayoutManager: LinearLayoutManager
-//    lateinit var dividerItemDecoration: DividerItemDecoration
-//    lateinit var exerciseList: List<Exercise>
-//    lateinit var adapter: Adapter
-//
-//    val moviesList = new arrayListOf<Exercise>()
-//    val adapter = new ExerciseAdapter(getApplicationContext(), exerciseList);
-//    val eList = findViewById<RecyclerView>(R.id.list_ex_history)
-//    exerciseList = arrayListOf<Int>()
 
     private lateinit var eList: RecyclerView
-
-   // private lateinit var exerList: ArrayList<Int>()
     private val exerciseList = ArrayList<Exercise>()
-
     private lateinit var adapter: ExerciseAdapter
-    //private val adapter = ExerciseAdapter(applicationContext, exerciseList)
-
     private lateinit var linearLayoutManager: LinearLayoutManager
-    //private val linearLayoutManager = LinearLayoutManager(this,LinearLayoutManager.VERTICAL, false)
-
     private lateinit var dividerItemDecoration: DividerItemDecoration
-    //private val dividerItemDecoration = DividerItemDecoration(eList.context, linearLayoutManager.orientation)
-
     private val url = "https://aa1191.000webhostapp.com/scripts/exercise_history.php"
     private val userID = 1
 
@@ -61,15 +42,11 @@ class ExerciseHistoryActivity : AppCompatActivity() {
         linearLayoutManager = LinearLayoutManager(this,LinearLayoutManager.VERTICAL, false)
         dividerItemDecoration = DividerItemDecoration(eList.context, linearLayoutManager.orientation)
 
-
         eList.setHasFixedSize(true)
         eList.layoutManager = linearLayoutManager
         eList.addItemDecoration(dividerItemDecoration)
         eList.adapter = adapter
         getData()
-
-//        val listView = findViewById<ListView>(R.id.exerciseHistoryListView)
-//        listView.adapter = MyCustomAdapter(this)
     }
 
     private fun getData() {
@@ -112,63 +89,5 @@ class ExerciseHistoryActivity : AppCompatActivity() {
 
         val requestQueue = Volley.newRequestQueue(this)
         requestQueue.add<JSONArray>(jsonArrayRequest)
-
     }
-
-//    private class MyCustomAdapter(context: Context): BaseAdapter() {
-//        val url = "https://aa1191.000webhostapp.com/scripts/exercise_history.php"
-//        val userID = 1
-//
-//        val jsonObject = JSONObject().apply{
-//            put("user_id", userID)
-//        }
-//        val jsonObjectRequest = JsonObjectRequest(Request.Method.POST, url, jsonObject,
-//                Response.Listener {
-//
-//                },
-//                Response.ErrorListener {
-//
-//                })
-//        //Volley.newRequestQueue(this).add(jsonObjectRequest)
-//
-//        private val mContext: Context
-//        init{
-//            mContext = context
-//        }
-//        //responsible for how many rows in my list
-//        override fun getCount(): Int {
-//            return 5
-//        }
-//
-//        //ignore
-//        override fun getItemId(position: Int): Long {
-//            return position.toLong()
-//        }
-//
-//        //ignore
-//        override fun getItem(position: Int): Any {
-//            return "TEST STRING"
-//        }
-//
-//        //Responsible for rendering out each row
-//        override fun getView(position: Int, convertView: View?, viewGroup: ViewGroup?): View {
-//
-//            val layoutInflater = LayoutInflater.from(mContext)
-//            val rowExercise = layoutInflater.inflate(R.layout.row_exercise, viewGroup, false)
-//            val description = rowExercise.findViewById<TextView>(R.id.description_ex_history)
-//            val startTime = rowExercise.findViewById<TextView>(R.id.start_ex_history)
-//            val endTime = rowExercise.findViewById<TextView>(R.id.end_ex_history)
-//            val intensity = rowExercise.findViewById<TextView>(R.id.intensity_ex_history)
-//            val date = rowExercise.findViewById<TextView>(R.id.date_ex_history)
-//
-//            val ampm = ""
-//
-//            description.text = ""
-//            startTime.text = ""
-//            endTime.text = ""
-//            intensity.text = ""
-//            date.text = ""
-//            return rowExercise
-//        }
-//    }
 }
