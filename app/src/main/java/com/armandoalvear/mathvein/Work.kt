@@ -1,6 +1,6 @@
 package com.armandoalvear.mathvein
 
-class Exercise {
+class Work {
     var desc: String? = null
     var intense: Int = 0
     var startTime: String? = null
