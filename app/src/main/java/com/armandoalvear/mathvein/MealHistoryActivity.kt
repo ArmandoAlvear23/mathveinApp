@@ -35,7 +35,6 @@ class MealHistoryActivity : AppCompatActivity() {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_meal_history)
 
-
         mList = findViewById<RecyclerView>(R.id.mealsRecyclerView) as RecyclerView
         adapter = MealAdapter(applicationContext, mealList)
         linearLayoutManager = LinearLayoutManager(this,LinearLayoutManager.VERTICAL, false)
