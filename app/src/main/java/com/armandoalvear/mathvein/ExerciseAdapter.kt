@@ -4,7 +4,6 @@ import android.content.Context
 import android.support.v7.widget.RecyclerView
 import android.view.LayoutInflater
 import android.view.View
-import android.view.ViewDebug
 import android.view.ViewGroup
 import android.widget.TextView
 
@@ -68,7 +67,6 @@ class ExerciseAdapter(private val context: Context, private val list: List<Exerc
         var exerciseDate: TextView
 
         init {
-
             exerciseDescripton = itemView.findViewById(R.id.description_ex_history)
             exerciseIntensity = itemView.findViewById(R.id.intensity_ex_history)
             exerciseStart = itemView.findViewById(R.id.start_ex_history)

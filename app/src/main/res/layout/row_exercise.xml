@@ -21,33 +21,33 @@
         app:layout_constraintTop_toTopOf="parent" />
 
     <TextView
-        android:id="@+id/start_ex_history"
+        android:id="@+id/intensity_ex_history"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginStart="16dp"
         android:layout_marginTop="8dp"
-        android:text="@string/start_"
+        android:text="@string/intensity_"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/description_ex_history" />
-
-    <TextView
-        android:id="@+id/intensity_ex_history"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginEnd="110dp"
-        android:text="@string/intensity_"
-        app:layout_constraintBottom_toBottomOf="@+id/date_ex_history"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintTop_toTopOf="@+id/date_ex_history" />
 
     <TextView
         android:id="@+id/end_ex_history"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
+        android:layout_marginEnd="110dp"
         android:text="@string/end_"
-        app:layout_constraintBottom_toBottomOf="@+id/start_ex_history"
-        app:layout_constraintStart_toStartOf="@+id/intensity_ex_history"
-        app:layout_constraintTop_toTopOf="@+id/start_ex_history"
+        app:layout_constraintBottom_toBottomOf="@+id/date_ex_history"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="@+id/date_ex_history" />
+
+    <TextView
+        android:id="@+id/start_ex_history"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/start_"
+        app:layout_constraintBottom_toBottomOf="@+id/intensity_ex_history"
+        app:layout_constraintStart_toStartOf="@+id/end_ex_history"
+        app:layout_constraintTop_toTopOf="@+id/intensity_ex_history"
         app:layout_constraintVertical_bias="0.0" />
 
     <TextView
@@ -60,5 +60,5 @@
         android:text="@string/date"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/start_ex_history" />
+        app:layout_constraintTop_toBottomOf="@+id/intensity_ex_history" />
 </android.support.constraint.ConstraintLayout>

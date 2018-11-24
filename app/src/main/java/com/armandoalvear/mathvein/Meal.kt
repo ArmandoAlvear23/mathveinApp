@@ -8,7 +8,6 @@ class Meal {
     var dessert: String? = null
     var timestamp: String? = null
 
-
     constructor(mainDish: String?, appetizer: String?, snack: String?, drink: String?, dessert: String?, timestamp: String?) {
         this.mainDish = mainDish
         this.appetizer = appetizer
