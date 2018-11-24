@@ -21,41 +21,26 @@ class WorkAdapter(private val context: Context, private val list: List<Work>) : 
 
     override fun onBindViewHolder(holder: ViewHolder, position: Int) {
         val work = list[position]
+
         var descValue = work.desc
         val intensityValue = work.intense
-        val startAmPmValue = work.startAmPm
-        val endAmPmValue = work.endAmPm
-        var startTimeFinal = work.startTime.toString().substring(0,5)
-        var endTimeFinal = work.endTime.toString().substring(0,5)
+        val startAmPmFlag = work.startAmPm
+        val endAmPmFlag = work.endAmPm
+        var tempStart = TimeConvert().getTimeSplit(work.startTime)
+        var tempEnd = TimeConvert().getTimeSplit(work.endTime)
 
         if (descValue.isNullOrBlank()){
             descValue = "(Not Specified)"
         }
-        if(startTimeFinal.substring(0,1)=="0"){
-            startTimeFinal = startTimeFinal.substring(1,5)
-        }
-        if(endTimeFinal.substring(0,1)=="0"){
-            endTimeFinal = endTimeFinal.substring(1,5)
-        }
-
         val intensityText = "Intensity: $intensityValue"
-        if (startAmPmValue == 0){
-            startTimeFinal= "Start: $startTimeFinal a.m."
-        }else{
-            startTimeFinal = "Start: $startTimeFinal p.m."
-        }
-
-        if (endAmPmValue == 0){
-            endTimeFinal = "End: $endTimeFinal a.m."
-        }else{
-            endTimeFinal = "End: $endTimeFinal p.m."
-        }
-        val date = "Date: " + work.timestamp.toString().substringBefore(' ')
+        val date = DateConvert().getDate(work.timestamp)
+        val startTime = TimeConvert().getTime(tempStart, startAmPmFlag, 0)
+        val endTime = TimeConvert().getTime(tempEnd, endAmPmFlag, 1)
 
         holder.workDescripton.setText(descValue)
         holder.workIntensity.setText(intensityText)
-        holder.workStart.setText(startTimeFinal)
-        holder.workEnd.setText(endTimeFinal)
+        holder.workStart.setText(startTime)
+        holder.workEnd.setText(endTime)
         holder.workDate.setText(date)
 
     }
@@ -68,7 +53,6 @@ class WorkAdapter(private val context: Context, private val list: List<Work>) : 
         var workDate: TextView
 
         init {
-
             workDescripton = itemView.findViewById(R.id.description_ex_history)
             workIntensity = itemView.findViewById(R.id.intensity_ex_history)
             workStart = itemView.findViewById(R.id.start_ex_history)

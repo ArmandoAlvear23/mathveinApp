@@ -24,7 +24,7 @@ class MealAdapter(private val context: Context, private val list: List<Meal>): R
         var dessertValue = meal.dessert
         var drinkValue = meal.drink
         var snackValue = meal.snack
-        var dateValue = meal.timestamp.toString().substringBefore(' ')
+        var date = DateConvert().getDate(meal.timestamp)
 
         if (mainDishValue.isNullOrBlank()){
             mainDishValue = "(none specified)"
@@ -33,16 +33,13 @@ class MealAdapter(private val context: Context, private val list: List<Meal>): R
         val finalDessert = "Dessert: $dessertValue"
         val finalDrink = "Drink: $drinkValue"
         val finalSnack = "Snack: $snackValue"
-        val finalDate = "Date: $dateValue"
 
         holder.mealMain.setText(mainDishValue)
         holder.mealAppetizer.setText(finalAppetizer)
         holder.mealDessert.setText(finalDessert)
         holder.mealDrink.setText(finalDrink)
         holder.mealSnack.setText(finalSnack)
-        holder.mealDate.setText(finalDate)
-
-    }
+        holder.mealDate.setText(date)   }
 
     inner class ViewHolder(itemView: View) : RecyclerView.ViewHolder(itemView) {
         var mealMain: TextView

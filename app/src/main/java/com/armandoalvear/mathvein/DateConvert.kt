@@ -1,14 +1,9 @@
 package com.armandoalvear.mathvein
 
 class DateConvert {
-    var timestamp: String? = null
 
-    constructor(timestamp: String?) {
-        this.timestamp = timestamp
-    }
+     fun getDate(timestamp: String?): String{
 
-
-    fun dateCon(timestamp: String?): String{
         val year = timestamp.toString().substring(0,4)
         val month = timestamp.toString().substring(5,7).toInt()
         val day = timestamp.toString().substring(8,10).toInt()

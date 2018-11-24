@@ -20,43 +20,27 @@ class ExerciseAdapter(private val context: Context, private val list: List<Exerc
 
     override fun onBindViewHolder(holder: ViewHolder, position: Int) {
         val exercise = list[position]
+
         var descValue = exercise.desc
         val intensityValue = exercise.intense
         val startAmPmValue = exercise.startAmPm
         val endAmPmValue = exercise.endAmPm
-        var startTimeFinal = exercise.startTime.toString().substring(0,5)
-        var endTimeFinal = exercise.endTime.toString().substring(0,5)
+        var tempStart = TimeConvert().getTimeSplit(exercise.startTime)
+        var tempEnd = TimeConvert().getTimeSplit(exercise.endTime)
 
         if (descValue.isNullOrBlank()){
-            descValue = "(Not Specified)"
+            descValue = "(None Specified)"
         }
-        if(startTimeFinal.substring(0,1)=="0"){
-            startTimeFinal = startTimeFinal.substring(1,5)
-        }
-        if(endTimeFinal.substring(0,1)=="0"){
-            endTimeFinal = endTimeFinal.substring(1,5)
-        }
-
-        val intensityText = "Intensity: $intensityValue"
-        if (startAmPmValue == 0){
-            startTimeFinal= "Start: $startTimeFinal a.m."
-        }else{
-            startTimeFinal = "Start: $startTimeFinal p.m."
-        }
-
-        if (endAmPmValue == 0){
-            endTimeFinal = "End: $endTimeFinal a.m."
-        }else{
-            endTimeFinal = "End: $endTimeFinal p.m."
-        }
-        val date = "Date: " + exercise.timestamp.toString().substringBefore(' ')
+        val startTime = TimeConvert().getTime(tempStart, startAmPmValue, 0)
+        val endTime = TimeConvert().getTime(tempEnd, endAmPmValue, 1)
+        val intensityFinal = "Intensity: $intensityValue"
+        val date = DateConvert().getDate(exercise.timestamp)
 
         holder.exerciseDescripton.setText(descValue)
-        holder.exerciseIntensity.setText(intensityText)
-        holder.exerciseStart.setText(startTimeFinal)
-        holder.exerciseEnd.setText(endTimeFinal)
+        holder.exerciseIntensity.setText(intensityFinal)
+        holder.exerciseStart.setText(startTime)
+        holder.exerciseEnd.setText(endTime)
         holder.exerciseDate.setText(date)
-
     }
 
     inner class ViewHolder(itemView: View) : RecyclerView.ViewHolder(itemView) {
